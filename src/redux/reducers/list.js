@@ -14,9 +14,11 @@ const list = (state = initialState, action) => {
       const newListName = state.listName.filter(
         (lname) => lname !== action.payload
       );
+
       const newList = state.list.filter(
         (movie) => movie.listName != action.payload
       );
+
       return {
         listName: newListName,
         list: newList,
